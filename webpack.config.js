@@ -4,7 +4,13 @@ module.exports = {
 	output: {
 		filename: "[name].js"
 	},
-
+	// plugins: [
+	// 	new webpack.ProvidePlugin({
+	// 		$: 'jquery',
+	// 		jQuery: 'jquery',
+	// 		'window.jQuery': 'jquery'
+	// 	  }),
+	// ],
 	module: {
 		rules: [
 			{

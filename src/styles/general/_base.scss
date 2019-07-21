@@ -1,12 +1,9 @@
-body {
-	font-family: "Arial", sans-serif;
-	font-size: 16px;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -15,15 +12,7 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .container {
-	@include container();
-	@include sm(max-width, 510px);
-	@include md(max-width, 690px);
-	@include lg(max-width, 930px);
-	@include xl(max-width, 1110px);
-}
-
-.img-responsive {
-	max-width: 500px;
 	width: 100%;
-	height: auto;
+	max-width: 1128px;
+	margin: 0 auto;
 }

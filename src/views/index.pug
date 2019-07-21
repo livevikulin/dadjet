@@ -1,7 +1,17 @@
 extends layouts/default
 block variables
 	- var title = "gulp-pug-starter"
+	- var main = false;
 
 block content
 	.container
 		include ../blocks/modules/main/main
+		ul.dadjet-page
+			li
+				a(href="#") Главная страница
+			li
+				a(href="#") Карточка с товаром
+			li
+				a(href="#") Корзина
+			li
+				a(href="#") Страница благодарности

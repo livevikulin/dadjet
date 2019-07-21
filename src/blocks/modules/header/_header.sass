@@ -1,0 +1,122 @@
+.header
+	&-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-main
+		display: flex
+		align-items: center
+		span
+			display: block
+			font-family: $OS-R
+			font-weight: 600
+			font-size: 15px
+			line-height: 20px
+			color: #222222
+	&-logo
+		border-right: 2px solid #F0F0F0
+	&-icons
+		height: 24px
+	&-city
+		display: flex
+		align-items: center
+	&-phone
+		display: flex
+		align-items: center
+	&-mail
+		display: flex
+		align-items: center
+	&-contacts
+		display: flex
+		align-items: center
+	&-login
+		display: flex
+		align-items: center
+	&-basket
+		display: flex
+		align-items: center
+		padding: 8px
+		border: 1px solid rgba(247, 56, 89, 0.3)
+		box-sizing: border-box
+		border-radius: 4px
+		transition: 0.2s
+		span
+			color: #F73859
+		&:hover
+			background: #F73859
+			span
+				color: #ffffff
+			path
+				fill: #ffffff
+		&:active
+			background: #D8304C
+.navbar
+	background: #282828
+	&-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-menu
+		ul
+			display: flex
+			list-style: none
+			padding: 0
+			li
+				a
+					position: relative
+					font-family: $OS-R
+					font-weight: 600
+					font-size: 13px
+					line-height: 16px
+					color: #FFFFFF
+					padding: 10px 0
+					&:before
+						position: absolute
+						content: ''
+						bottom: -8px
+						width: 100%
+						height: 4px
+						background: #ffffff
+						opacity: 0
+						transition: 0.3s
+					&:hover
+						&:before
+							opacity: 1
+
+	&-promo
+		position: relative
+		input
+			width: 238px
+			background: #282828
+			border: 1px solid #FFFFFF
+			box-sizing: border-box
+			border-radius: 4px
+			padding: 8px 0 8px 8px
+			outline: none
+			font-family: $OS-R
+			font-weight: 600
+			font-size: 15px
+			line-height: 20px
+			color: #7C7C7C
+			&:placeholder
+				font-family: $OS-R
+				font-weight: 600
+				font-size: 15px
+				line-height: 20px
+				color: #7C7C7C
+		a 
+			position: absolute
+			top: 0
+			right: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 100%
+			width: 40px
+			background: #ffffff
+			font-family: $OS-B
+			font-size: 15px
+			line-height: 14px
+			color: #222222
+			border-top-right-radius: 4px
+			border-bottom-right-radius: 4px
