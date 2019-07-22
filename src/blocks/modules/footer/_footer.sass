@@ -1,0 +1,78 @@
+.footer
+	&-social
+		width: 100%
+		display: flex
+		a
+			position: relative
+			z-index: 0
+			&:hover
+				&:before
+					opacity: 0.2
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				background: #000000
+				opacity: 0
+				z-index: -1
+				transition: 0.2s
+		&__fb
+			width: 50%
+			cursor: pointer
+			padding: 2px 0
+			background: linear-gradient(180deg, #07ACFD 0%, #1577F0 100%)
+			transition: 0.2s
+			span
+				float: right
+				margin-right: 337px
+		&__insta
+			width: 50%
+			cursor: pointer
+			padding: 2px 0
+			background: linear-gradient(84.07deg, #FEDA75 0%, #FA7E1E 24.48%, #D62976 51.56%, #962FBF 77.08%, #4F5BD5 100%)
+			transition: 0.2s
+			span
+				margin-left: 337px
+			
+	&-blocks
+		display: flex
+		justify-content: space-between
+		padding: 24px 0
+	&-block
+		display: flex
+		ul
+			width: 264px
+			list-style: none
+			padding: 0
+			margin-right: 24px
+			li
+				a
+					font-family: $OS-R
+					font-weight: 600
+					font-size: 15px
+					line-height: 20px
+					box-sizing: border-box
+					color: #222222
+					transition: 0.2s
+					&:hover
+						border-bottom: 2px solid #222222
+	&-contacts
+		ul
+			list-style: none
+			padding: 0
+			li
+				a
+					display: flex
+					align-items: center
+					font-family: $OS-R
+					font-weight: 600
+					font-size: 15px
+					line-height: 20px
+					color: #222222
+					transition: 0.2s
+	&-icons
+		display: block
+		height: 24px

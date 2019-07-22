@@ -32,6 +32,15 @@
 	&-login
 		display: flex
 		align-items: center
+		cursor: pointer
+		transition: 0.2s
+		path
+			transition: 0.2s
+		&:hover
+			span
+				color: #367BF5
+				path
+					fill: #367BF5
 	&-basket
 		display: flex
 		align-items: center
@@ -78,7 +87,7 @@
 						height: 4px
 						background: #ffffff
 						opacity: 0
-						transition: 0.3s
+						transition: 0.2s
 					&:hover
 						&:before
 							opacity: 1
