@@ -162,6 +162,11 @@
 		background: #F9F9FB
 	&-products
 		padding: 40px 0 56px
+	&-articles
+		padding: 40px 0 56px
+	&-partners
+		padding: 40px 0 56px
+		background: #F9F9FB
 @keyframes slide 
 	0%
 		opacity: 0
@@ -183,7 +188,7 @@
 		box-sizing: border-box
 		&__anim
 			opacity: 1
-			animation: slide 1s ease-in-out
+			animation: slide .5s
 		h2
 			font-family: $OS-B
 			font-weight: bold
@@ -265,6 +270,7 @@
 			border: 1px solid #F0F0F0
 			box-sizing: border-box
 			border-radius: 4px
+			overflow: hidden
 		span
 			display: block
 			font-family: $OS-B
@@ -306,7 +312,7 @@
 			height: 360px
 			img
 				width: auto
-				height: auto
+				height: 100%
 .products
 	&-title
 		display: block
@@ -319,25 +325,56 @@
 		display: flex
 		justify-content: space-between
 		margin-top: 32px
+		&:nth-child(1n+2)
+			margin-top: 24px
 	&-box
 		width: 264px
+		height: 468px
 		border: 1px solid #F0F0F0
 		box-sizing: border-box
 		border-radius: 4px
 		padding: 24px
+		&__image
+			width: 216px
+			height: 216px
 		&__info
 			padding-top: 16px
 	&-info
 		&__title
 			display: block
-			font-family: $OS-SB
-			font-weight: 600
-			font-size: 15px
-			line-height: 20px
-			color: #367BF5
+			font-family: $OS-SB !important
+			font-weight: 600 !important
+			font-size: 15px !important
+			line-height: 20px !important
+			color: #367BF5 !important
+		&__subtitle
+			display: block
+			font-family: $OS-R
+			font-size: 12px
+			line-height: 18px
+			color: #7C7C7C
+			margin-top: 8px
+		&__option
+			height: 110px
 		&__platform
 			display: flex
 			margin-top: 8px
+		&__color
+			display: flex
+			margin-top: 8px
+			span
+				display: block
+				font-family: $OS-R
+				font-size: 11px
+				line-height: 16px
+				letter-spacing: 0.05em
+				text-transform: uppercase
+				color: #7C7C7C
+				margin-right: 8px
+		&__button
+			width: 100px
+			height: 30px
+			margin-top: 12px
 	&-platform
 		margin-right: 8px
 		&:last-child
@@ -372,3 +409,218 @@
 			color: #7C7C7C
 			&:first-child
 				margin-right: 2px
+	&-color
+		ul
+			display: flex
+			list-style: none
+			padding: 0
+			li
+				margin-right: 4px
+				input
+					display: none
+					&:checked + label
+						border-radius: 0
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				label
+					display: block
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					cursor: pointer
+					transition: 0.2s
+					&:hover
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	&-price
+		&__old
+			display: block
+			font-family: $OS-R
+			font-size: 13px
+			line-height: 16px
+			text-decoration-line: line-through
+			color: #7C7C7C
+		&__new
+			display: block
+			font-family: $OS-B
+			font-size: 18px
+			line-height: 18px
+			color: #222222
+	&-middlebox
+		display: flex
+		width: 552px
+		height: 288px
+		background: #FFFFFF
+		border: 1px solid #F0F0F0
+		box-sizing: border-box
+		border-radius: 4px
+		padding: 24px
+		&__image
+			width: 240px
+			height: 240px
+			margin-right: 24px
+		&__info
+		.products-info__option
+			height: auto
+		.products-info__price
+			margin-top: 16px
+	&-bigbox
+		display: flex
+		justify-content: space-between
+		width: 100%
+		height: 392px
+		background: #FFFFFF
+		border: 1px solid #F0F0F0
+		box-sizing: border-box
+		border-radius: 4px
+		padding: 24px
+		&__subtitle
+			width: 502px
+		&__title
+			display: block
+			font-family: $OS-B
+			font-size: 22px
+			line-height: 26px
+			letter-spacing: -0.01em
+			color: #367BF5
+		&__stitle
+			display: block
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #222222
+			margin-top: 14px
+		&__list
+			list-style: none
+			margin-top: 12px
+		&__item
+			padding-left: 20px
+			margin-bottom: 8px
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				margin-top: -8px
+				width: 16px
+				height: 16px
+				background: url('../img/red-dot.png') no-repeat 50% 50%
+			&:last-child
+				margin-bottom: 0
+			span
+				font-family: $OS-R
+				font-size: 15px
+				line-height: 18px
+				color: #7C7C7C
+		&__info
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+		.products-info__price
+			margin-top: 16px
+.articles
+	&-title
+		display: block
+		font-family: $OS-B
+		font-size: 31px
+		line-height: 36px
+		letter-spacing: -0.03em
+		color: #222222
+	&-boxes
+		display: flex
+		justify-content: space-between
+		padding: 32px 0 40px
+	&-box
+		width: 264px
+		border-radius: 4px
+		&__image
+			width: 264px
+			height: 240px
+			img
+				width: auto
+				max-width: 100%
+		&__info
+			margin-top: 8px
+		&__title
+			display: block
+			font-family: $OS-B
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			color: #222222
+		&__link
+			display: inline-block
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 18px
+			color: #367BF5
+			box-sizing: border-box
+			&:hover
+				color: #0B55DB
+				// border-bottom: 1px solid #367BF5
+	&-more
+		display: flex
+		align-items: center
+		width: 183px
+		margin: 0 auto
+		font-family: $OS-SB
+		font-size: 15px
+		line-height: 14px
+		color: #7C7C7C
+		border: 1px solid #F0F0F0
+		box-sizing: border-box
+		border-radius: 4px
+		padding: 4px 8px
+		transition: 0.2s
+		svg
+			transition: 0.2s
+		span
+			margin-left: 4px
+		&:hover
+			border-color: #7C7C7C
+			svg
+				transform: rotate(180deg)
+.partners
+	&-title
+		display: block
+		font-family: $OS-B
+		font-size: 31px
+		line-height: 36px
+		letter-spacing: -0.03em
+		color: #222222
+		margin-bottom: 32px
+	&-slide
+		width: 168px !important
+		height: 168px
+	.slick-arrow
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background: #FFFFFF
+		border: 1px solid #F0F0F0
+		box-sizing: border-box
+		z-index: 1
+		transition: 0.2s
+		&:hover
+			box-shadow: -8px 4px 8px rgba(0, 0, 0, 0.16)
+		&:active
+			box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.24)
+	.slick-prev
+		background-image: url('../img/arrow.png')
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		transform: rotate(180deg)
+		left: -20px
+		margin-top: -20px
+		&:before
+			display: none
+	.slick-next
+		background-image: url('../img/arrow.png')
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		right: -20px
+		&:before
+			display: none
+	.slick-slide
+		height: 168px
+		margin-right: 24px
+		

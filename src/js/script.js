@@ -7,6 +7,16 @@ $(document).ready(function () {
 	$('.main-slider').slick({
 		dots: true,
 		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000
+	});
+	
+	//Инициализация слайдера с партнерами
+	$('.partners-slider').slick({
+		slidesToShow: 6,
+		slidesToScroll: 3,
+		arrows: true,
+		variableWidth: true,
 		// autoplay: true,
 		// autoplaySpeed: 4000
 	});
