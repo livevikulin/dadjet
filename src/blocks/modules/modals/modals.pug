@@ -1,0 +1,51 @@
+.login#modal_login
+	#login-tabs
+		ul.login-tabs__list
+			li
+				a(href="#tabs-login") Вход
+			li
+				a(href="#tabs-signIn") Регистрация
+		.login-box#tabs-login
+			span.login-box__help Войдите в личный кабинет, используя e-mail или номер телефона через +7:
+			form(action="#").login-form
+				.login-form__input
+					input(type="text" id="input_user")
+					label(for="input_user") E-mail
+				.login-form__input
+					input(type="text" id="input_pass")
+					label(for="input_pass") Пароль
+				.login-form__btns
+					a(href="#").login-form__forgot Забыли пароль?
+					a(href="#").login-form__submit.btn Войти
+			.login-bottom
+				a(href="#").login-bottom__btn Регистрация
+		.login-box#tabs-signIn
+			span.login-box__help Отслеживайте статусы, историю заказов, экономьте время при оформлении следующих заказов, получайте бонусы.
+			form(action="#").login-form
+				.login-form__input
+					input(type="text" id="reg_name")
+					label(for="reg_name") E-mail
+				.login-form__phone
+					.login-phone__input
+						input(type="text" id="reg_phone")
+						label(for="reg_phone") Номер телефона
+					a(href="#").login-phone__submit.login-phone__none.btn Получить код
+				.login-form__input
+					input(type="text" id="reg_message")
+					label(for="reg_message") Код из SMS
+				.login-form__input
+					input(type="text" id="reg_pass")
+					label(for="reg_pass") Пароль
+				.login-form__input
+					input(type="text" id="reg_repeatPass")
+					label(for="reg_repeatPass") Повторите пароль
+				.login-check
+					.login-form__check
+						input(type="checkbox" id="news" name="news")
+						label(for="news") Получать новостную рассылку
+					.login-form__check
+						input(type="checkbox" id="consent" name="consent")
+						label(for="consent") Я соглашаюсь с публичной офертой и политикой по обработке персональных данных
+				a(href="#").login-form__reg.btn Зарегистрироваться
+			.login-bottom
+				a(href="#").login-bottom__btn Есть логин. Войти

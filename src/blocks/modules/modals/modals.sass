@@ -1,0 +1,203 @@
+.login
+	display: none
+	width: 100%
+	max-width: 493px
+	box-sizing: border-box
+	margin: 0 auto
+	padding: 32px
+	background: #ffffff
+	#login-tabs
+		ul
+			display: flex
+			justify-content: space-between
+			list-style: none
+			border-bottom: 1px solid #F0F0F0
+			li
+				width: 50%
+				text-align: center
+				padding-bottom: 8px
+				outline: none
+				a
+					font-family: $OS-SB
+					font-size: 15px
+					line-height: 16px
+					text-align: center
+					color: #7C7C7C
+					outline: none
+			.ui-state-active
+				border-bottom: 2px solid #367BF5
+				a
+					color: #367BF5
+	&-box
+		padding-top: 24px
+		&__help
+			display: block
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 18px
+			color: #7C7C7C
+	&-form
+		padding-top: 24px
+		&__input
+			width: 100%
+			margin-bottom: 16px
+			box-sizing: border-box
+			position: relative
+			&:last-child
+				margin-bottom: 0
+			input
+				width: 100%
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 16px
+				outline: none
+				transition: 0.2s
+				&:focus
+					border: 2px solid #367BF5
+					box-sizing: border-box
+				&:focus + label
+					font-size: 12px
+					line-height: 12px
+					top: -5px
+					left: 13px
+					padding: 0 3px
+			label
+				position: absolute
+				height: 22px
+				top: 20px
+				left: 16px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #ffffff
+				z-index: 1
+				transition: 0.2s
+		&__phone
+			display: flex
+			justify-content: space-between
+			margin-bottom: 16px
+			position: relative
+			input
+				width: 271px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 16px
+				outline: none
+				transition: 0.2s
+				&:focus
+					border: 2px solid #367BF5
+					box-sizing: border-box
+				&:focus + label
+					font-size: 12px
+					line-height: 12px
+					top: -5px
+					left: 13px
+					padding: 0 3px
+			label
+				position: absolute
+				height: 22px
+				top: 20px
+				left: 16px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #ffffff
+				z-index: 1
+				transition: 0.2s
+		&__btns
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 24px 0
+		&__forgot
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 18px
+			color: #367BF5
+			&:hover
+				color: #0B55DB
+		&__submit
+			width: 100px
+			height: 40px
+		&__check
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 0
+			input
+				display: none
+				&:checked + label:after
+					display: block
+			label
+				display: block
+				font-family: $OS-R
+				font-size: 15px
+				line-height: 24px
+				color: #7C7C7C
+				padding-left: 32px
+				cursor: pointer
+				transition: 0.2s
+				position: relative
+				&:hover
+					color: #222222
+					&:before
+						border-color: #222222
+				&:before
+					position: absolute
+					content: ''
+					width: 24px
+					height: 24px
+					top: 0
+					left: 0
+					background: #FFFFFF
+					border: 1px solid #F0F0F0
+					box-sizing: border-box
+					transition: 0.2s
+				&:after
+					display: none
+					position: absolute
+					content: ''
+					width: 24px
+					height: 24px
+					top: 0
+					left: 0
+					background: url('../img/consent.png') no-repeat 50% 50% #367BF5
+					z-index: 1
+					transition: 0.2s
+		&__reg
+			width: 202px
+			height: 40px
+			margin: 24px auto
+	&-phone
+		&__submit
+			width: 150px
+			height: 56px
+		&__none
+			opacity: 0.1
+			cursor: default
+			&:hover
+				opacity: 0.1
+	&-bottom
+		display: flex
+		justify-content: center
+		padding-top: 24px
+		border-top: 1px solid #F0F0F0
+		&__btn
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 18px
+			color: #367BF5
+			&:hover
+				color: #0B55DB
+	
