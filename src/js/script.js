@@ -24,15 +24,37 @@ $(document).ready(function () {
 		// autoplaySpeed: 4000
 	});
 	
+	//Инициализация слайдера в карточке с товаром
+	$('.product-slider__for').slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		speed: 500,
+		asNavFor: '.product-slider__nav'
+	});
+	$('.product-slider__nav').slick({
+		infinite: false,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.product-slider__for',
+		// centerMode: true,
+		arrows: true,
+		vertical: true,
+		verticalSwiping: true,
+		focusOnSelect: true
+	});
+	
 	//Инициализация табов
 	$('#tabs').tabs({
 		hide: { 
 			effect: "fade", 
-			duration: 500 
+			duration: 75 
 		},
 		show: { 
 			effect: "fade", 
-			duration: 500 
+			duration: 75 
 		}
 	});
 	
@@ -76,7 +98,7 @@ $(document).ready(function () {
 	})
 	
 	//Убираем лэйбл, если инпут заполнен
-	$('#input_user, #input_pass, #reg_name, #reg_phone, #reg_message, #reg_repeatPass').on('change', function() {
+	$('#input_user, #input_pass, #reg_name, #reg_phone, #reg_message, #reg_pass, #reg_repeatPass, #feedback_name, #feedback_phone, #feedback_mail, #feedback_textarea').on('change', function() {
 		if ($(this).val() != '') {
 			$(this).next().css('display', 'none')
 		} else {

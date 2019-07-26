@@ -1,0 +1,72 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Оптовым клиентам";
+	- var main = true;
+
+block content
+	main
+		.main
+			.container
+				.breadcrumbs
+					a(href="#") Главная
+					span Текущая страница
+				.wholesaler
+					span.wholesaler-title Оптовым клиентам
+					span.wholesaler-subtitle Мы открыты для сотрудничества с организациями и предоставляем сервисы для разных типов клиентов, чтобы наше сотрудничество было наиболее удобным и выгодным.
+					.wholesaler-info
+						p
+							span.wholesaler-info__property Розничным магазинам
+							span.wholesaler-info__val Мы предлагаем помощь в планировании ассортимента и выкладке, удобный механизм ротации товара, информативные ценники, раздаточные материалы, обучение продавцов.
+						p
+							span.wholesaler-info__property Интернет-магазинам
+							span.wholesaler-info__val Предоставляется качественный контент и возможность работы под заказ с забором товара день в день.
+						p
+							span.wholesaler-info__property Корпоративным заказчикам
+							span.wholesaler-info__val Корпоративным заказчикам, приобретающим товары для собственных нужд организации и в качестве подарков на мероприятия, возможно брендирование и упаковка под заказ.
+						p
+							span.wholesaler-info__property Франшиза
+							span.wholesaler-info__val Если Вы готовы расширить бизнес и приобрести франшизу мы предлагаем 2 уникальных варианта на рынке франшиз: покупка уже действующего магазина и открытие нового магазина на базе вашего действующего по модели  shop in shop.  Ознакомьтесь с нашим предложением франчайзинга.
+		.wholesaler-partners
+			.main-partners
+				.container
+					.partners
+						span.partners-title Наши партнеры
+						.partners-slider
+							.partners-slide
+								img(src="img/partners-img1.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img2.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img3.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img1.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img2.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img3.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img1.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img2.jpg", alt="")
+							.partners-slide
+								img(src="img/partners-img3.jpg", alt="")
+		.main-feedback
+			.container
+				.feedback
+					span.feedback-title Форма обратной связи
+					form(action="#").feedback-form
+						.feedback-form__block
+							.feedback-form__input
+								input(type="text" id="feedback_name")
+								label(for="feedback_name") Ф.И.О
+							.feedback-form__input
+								input(type="text" id="feedback_phone")
+								label(for="feedback_phone") Номер телефона
+							.feedback-form__input
+								input(type="text" id="feedback_mail")
+								label(for="feedback_mail") E-mail
+						.feedback-form__block
+							.feedback-form__textarea
+								textarea(cols="30", rows="10" id="feedback_textarea")
+								label(for="feedback_textarea") Комментарий
+					a(href="#").feedback-buttons.btn Отправить

@@ -200,6 +200,8 @@
 		background: #F9F9FB
 	&-gallery
 		padding: 40px 0 56px
+	&-feedback
+		padding: 40px 0 56px
 @keyframes slide 
 	0%
 		opacity: 0
@@ -207,6 +209,8 @@
 	100%
 		opacity: 1
 		transform: translate(0px,0px)
+.slick-slide
+	outline: none
 .slide
 	position: relative
 	&-box
@@ -483,6 +487,8 @@
 			font-size: 18px
 			line-height: 18px
 			color: #222222
+		&__sale
+			margin-left: 8px
 	&-middlebox
 		display: flex
 		width: 552px
@@ -745,7 +751,409 @@
 					padding-bottom: 6px
 					box-sizing: border-box
 					outline: none
+					transition: 0.2s
+					&:hover
+						color: #000000
 			.ui-tabs-active
 				a
 					color: #367BF5
 					border-bottom: 2px solid #367BF5
+					&:hover
+						color: #367BF5
+.breadcrumbs
+	font-family: $OS-R
+	font-size: 11px
+	line-height: 16px
+	color: #7C7C7C
+	padding: 16px 0
+	border-bottom: 1px solid #F0F0F0
+	a
+		font-family: $OS-R
+		font-size: 11px
+		line-height: 16px
+		color: #7C7C7C
+		margin-right: 20px
+		position: relative
+		&:hover
+			border-bottom: 1px solid #7C7C7C
+		&:before
+			position: absolute
+			content: ''
+			top: 6px
+			right: -12px
+			width: 4px
+			height: 4px
+			background: #7C7C7C
+			border-radius: 50%
+.product
+	padding: 24px 0 56px
+	&-main
+		display: flex
+	&-slider
+		display: flex
+		&__for
+			width: 552px
+			margin-right: 24px
+		&__nav
+			width: 72px
+			padding: 80px 0
+			margin-right: 24px
+			.product-slider__slide
+				border-radius: 4px
+			.slick-slide
+				width: 72px !important
+				height: 72px !important
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				overflow: hidden
+				margin-bottom: 9px
+				cursor: pointer
+				transition: 0.2s
+				&:hover
+					border-color: #7C7C7C
+			.slick-current
+				border: 1px solid #367BF5
+			.slick-arrow
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background: #FFFFFF
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				z-index: 1
+				transition: 0.2s
+				&:hover
+					box-shadow: -8px 4px 8px rgba(0, 0, 0, 0.16)
+				&:active
+					box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.24)
+			.slick-prev
+				background-image: url('../img/arrow.png')
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				transform: rotate(-90deg)
+				top: 16px
+				left: 50%
+				margin-left: -20px
+				// margin-top: -20px
+				&:before
+					display: none
+			.slick-next
+				background-image: url('../img/arrow.png')
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				transform: rotate(90deg)
+				bottom: 26px
+				left: 50%
+				top: auto
+				margin-left: -20px
+				&:before
+					display: none
+			.slick-disabled
+				display: none !important
+		&__slide
+			img
+				width: auto
+				max-width: 100%
+				height: auto
+				max-height: 100%
+	&-info
+		width: 100%
+		&__title
+			font-family: $OS-B
+			font-size: 31px
+			line-height: 36px
+			letter-spacing: -0.03em
+			color: #222222
+		&__vendorcode
+			margin-top: 8px
+	&-title
+		border-bottom: 1px solid #F0F0F0
+		padding-bottom: 16px
+	&-vendorcode
+		&__text
+			font-family: $OS-R
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			color: #7C7C7C
+		&__code
+			font-family: $OS-B
+			font-size: 11px
+			line-height: 16px
+			color: #222222
+			margin-left: 4px
+	&-options
+		padding: 16px 0
+		border-bottom: 1px solid #F0F0F0
+		&__check
+			display: flex
+			align-items: center
+			font-family: $OS-B
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			color: #8BC34A
+			margin-bottom: 8px
+			svg
+				margin-right: 4px
+		.products-info__platform
+			align-items: center
+		&__platform
+			font-family: $OS-R
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			color: #7C7C7C
+			margin-right: 8px
+	&-price
+		padding: 16px 0
+		.products-price__old
+			font-size: 16px
+			line-height: 16px
+			svg
+				width: 10px
+				height: 10px
+				margin-left: 2px
+		.products-price__new
+			font-size: 28px
+			line-height: 28px
+			margin-top: 4px
+			svg
+				width: 16px
+				height: 16px
+				margin-left: 2px
+	&-buttons
+		display: flex
+		margin-bottom: 32px
+		&__basket
+			width: 122px
+			height: 40px
+			margin-right: 16px
+		&__click
+			font-family: $OS-SB
+			font-size: 15px
+			line-height: 14px
+			display: flex
+			align-items: center
+			text-align: center
+			color: #7C7C7C
+			border: 1px solid #F0F0F0
+			border-radius: 4px
+			padding: 12px 22px 14px
+			transition: 0.2s
+			&:hover
+				border-color: #7C7C7C
+			&:active
+				border-color: #367BF5
+				color: #367BF5
+	&-delivery
+		padding: 16px
+		background: #F9F9FB
+		border-radius: 4px
+		&__city
+			display: block
+			font-family: $OS-B
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			color: #222222
+			margin-bottom: 8px
+		&__item
+			display: flex
+			justify-content: space-between
+			margin: 0
+	&-item
+		span
+			display: block
+		&__property
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #7C7C7C
+			a
+				border-bottom: 1px solid #367BF5
+				color: #367BF5
+				margin-left: 5px
+				transition: 0.2s
+				&:hover
+					color: #0B55DB
+		&__val
+			font-family: $OS-SB
+			font-size: 15px
+			line-height: 24px
+			color: #222222
+	.main-feauture
+		background: #F9F9FB
+		border-radius: 4px
+	.gallery-tabs
+		padding-top: 0
+	.main-gallery
+		padding-bottom: 0
+	&-tabs
+		font-family: $OS-R
+		font-size: 15px
+		line-height: 24px
+		color: #222222
+		background: #F9F9FB
+		border-radius: 4px
+		padding: 24px
+	&-like
+		background: #F9F9FB
+		padding: 40px 0 56px
+		.products-box
+			background: #ffffff
+			transition: 0.2s
+			&:hover
+				border-color: #DDDDDD
+		.products-info__title
+			&:hover
+				color: #0B55DB !important
+				cursor: pointer
+.wholesaler
+	padding: 40px 0 56px
+	&-title
+		display: block
+		font-family: $OS-B
+		font-size: 48px
+		line-height: 48px
+		color: #222222
+	&-subtitle
+		display: block
+		width: 100%
+		max-width: 830px
+		font-family: $OS-R
+		font-size: 18px
+		line-height: 28px
+		color: #222222
+		margin: 24px 0 40px
+	&-info
+		background: #F9F9FB
+		p
+			display: flex
+			padding: 16px 24px 24px
+			border-bottom: 1px solid #F0F0F0
+			margin: 0
+			&:last-child
+				border: none
+		span
+			display: block
+		&__property
+			width: 100%
+			max-width: 334px
+			font-family: $OS-B
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			color: #222222
+		&__val
+			width: 100%
+			max-width: 719px
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #222222
+	&-partners
+		background: #F9F9FB
+.feedback
+	&-title
+		font-family: $OS-B
+		font-size: 31px
+		line-height: 36px
+		letter-spacing: -0.03em
+		color: #222222
+	&-form
+		display: flex
+		padding-top: 32px
+		&__block
+			margin-right: 16px
+			&:last-child
+				width: 100%
+				margin-right: 0
+		&__input
+			width: 359px
+			margin-bottom: 16px
+			position: relative
+			&:last-child
+				margin-bottom: 0
+			input
+				width: 100%
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 16px
+				outline: none
+				transition: 0.2s
+				&:hover
+					border-color: #7C7C7C
+				&:focus
+					border: 2px solid #367BF5
+					box-sizing: border-box
+				&:focus + label
+					font-size: 12px
+					line-height: 12px
+					top: -5px
+					left: 13px
+					padding: 0 3px
+			label
+				position: absolute
+				height: 22px
+				top: 20px
+				left: 16px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #ffffff
+				z-index: 1
+				transition: 0.2s
+		&__textarea
+			width: 100%
+			position: relative
+			textarea
+				width: 100%
+				min-height: 200px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 16px
+				outline: none
+				transition: 0.2s
+				&:hover
+					border-color: #7C7C7C
+				&:focus
+					border: 2px solid #367BF5
+					box-sizing: border-box
+				&:focus + label
+					font-size: 12px
+					line-height: 12px
+					top: -5px
+					left: 13px
+					padding: 0 3px
+			label
+				position: absolute
+				height: 22px
+				top: 20px
+				left: 16px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #ffffff
+				z-index: 1
+				transition: 0.2s
+	&-buttons
+		width: 128px
+		height: 30px
+		margin: 40px auto 0
