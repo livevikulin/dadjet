@@ -114,6 +114,8 @@
 .ph-32
 	padding: 0 32px
 //Стили для главной страницы
+main
+	min-height: 100vh
 .main
 	&-slider
 		height: 496px
@@ -785,6 +787,8 @@
 			height: 4px
 			background: #7C7C7C
 			border-radius: 50%
+
+//Стили для страницы с карточкой товара
 .product
 	padding: 24px 0 56px
 	&-main
@@ -1013,6 +1017,8 @@
 			&:hover
 				color: #0B55DB !important
 				cursor: pointer
+
+//Стили для страницы оптовым клиентам
 .wholesaler
 	padding: 40px 0 56px
 	&-title
@@ -1157,3 +1163,459 @@
 		width: 128px
 		height: 30px
 		margin: 40px auto 0
+
+//Стили для страницы корзина
+.basket
+	padding: 40px 0 56px
+	&-block
+		display: flex
+		justify-content: space-between
+	&-title
+		display: block
+		font-family: $OS-B
+		font-size: 48px
+		line-height: 48px
+		color: #222222
+	&-main
+		width: 100%
+		max-width: 744px
+		margin-top: 32px
+		background: #F9F9FB
+		border-radius: 4px
+	&-products
+		display: table
+		width: 100%
+	&-product
+		display: table-row
+		width: 100%
+		background: #ffffff
+		&__td
+			display: table-cell
+			vertical-align: middle
+			border-top: 1px solid #F0F0F0
+			border-bottom: 1px solid #F0F0F0
+			padding: 24px 0
+			&:first-child
+				padding-left: 24px
+				border-left: 1px solid #F0F0F0
+				border-top-left-radius: 4px
+				border-bottom-left-radius: 4px
+			&:last-child
+				padding-right: 20px
+				border-right: 1px solid #F0F0F0
+				border-top-right-radius: 4px
+				border-bottom-right-radius: 4px
+		&__image
+			width: 78px
+			height: 74px
+			img
+				width: auto
+				max-width: 100%
+				height: auto
+				max-height: 100%
+		&__name
+			width: 187px
+			p
+				margin: 0
+		&__price
+			font-family: $OS-R
+			font-size: 13px
+			line-height: 16px
+			color: #7C7C7C
+		&__availability
+			display: flex
+			align-items: center
+			justify-content: center
+			button
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				border: 1px solid #F0F0F0
+				outline: none
+				cursor: pointer
+				transition: 0.2s
+				&:hover
+					box-shadow: -8px 4px 8px rgba(0, 0, 0, 0.16)
+			input
+				width: 40px
+				font-family: $OS-R
+				font-size: 15px
+				line-height: 24px
+				text-align: center
+				color: #7C7C7C
+				border: none
+				outline: none
+		&__sum
+			font-family: $OS-B
+			font-size: 18px
+			line-height: 18px
+			color: #222222
+	&-name
+		&__property
+			font-family: $OS-R
+			font-size: 11px
+			line-height: 16px
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			color: #7C7C7C
+			margin-right: 4px
+		&__val
+			font-family: $OS-B
+			font-size: 11px
+			line-height: 16px
+			color: #222222
+		&__link
+			font-family: $OS-B
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			color: #222222
+	&-availability
+		&__minus
+			background: url('../img/minus.png') no-repeat 50% 50% #ffffff
+		&__plus
+			background: url('../img/plus.png') no-repeat 50% 50% #ffffff
+	&-form
+		padding: 52px 24px 24px
+		&__title
+			display: block
+			font-family: $OS-B
+			font-size: 22px
+			line-height: 26px
+			letter-spacing: -0.01em
+			color: #222222
+			margin-bottom: 24px
+		&__input
+			position: relative
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 0
+			input
+				width: 100%
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 16px
+				outline: none
+				transition: 0.2s
+				&:hover
+					border-color: #7C7C7C
+				&:focus
+					border: 2px solid #367BF5
+					box-sizing: border-box
+				&:focus + label
+					font-size: 12px
+					line-height: 12px
+					top: -5px
+					left: 13px
+					padding: 0 3px
+			label
+				position: absolute
+				height: 22px
+				top: 20px
+				left: 16px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #ffffff
+				z-index: 1
+				transition: 0.2s
+		&__textarea
+			margin-top: 16px
+			position: relative
+			textarea
+				width: 100%
+				max-width: 696px
+				min-height: 80px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 16px
+				outline: none
+				transition: 0.2s
+				&:hover
+					border-color: #7C7C7C
+				&:focus
+					border: 2px solid #367BF5
+					box-sizing: border-box
+				&:focus + label
+					font-size: 12px
+					line-height: 12px
+					top: -5px
+					left: 13px
+					padding: 0 3px
+			label
+				position: absolute
+				height: 22px
+				top: 20px
+				left: 16px
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #ffffff
+				z-index: 1
+				transition: 0.2s
+		&__boxes
+			display: flex
+			justify-content: space-between
+		&__box
+			width: 100%
+			max-width: 340px
+		&__pass
+			padding: 24px 0 40px
+		&__pay
+			margin-top: 40px
+		&__offer
+			padding: 24px
+			margin: 24px 0
+			font-family: $OS-R
+			font-size: 13px
+			line-height: 20px
+			color: #7C7C7C
+			background: #ffffff
+			a
+				color: #367BF5
+				transition: 0.2s
+				&:hover
+					color: #0B55DB
+	&-pass
+		&__title
+			display: block
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 18px
+			color: #7C7C7C
+			margin: 0 0 16px
+	&-delivery
+		&__city
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #7C7C7C
+			a
+				color: #367BF5
+				outline: none
+				transition: 0.2s
+				&:hover
+					color: #0B55DB
+		&__choice
+			margin-top: 24px
+		&__title
+			display: block
+			font-family: $OS-B
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			color: #222222
+			margin-bottom: 16px
+		&__address
+			margin-top: 24px
+	&-choice
+		margin-bottom: 12px
+		&:last-child
+			margin-bottom: 0
+		input
+			display: none
+			&:checked + label
+				color: #222222
+				font-family: $OS-SB
+				&:after
+					display: block
+				&:before
+					display: none
+		label
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #7C7C7C
+			padding-left: 32px
+			transition: 0.2s
+			cursor: pointer
+			position: relative
+			&:before
+				display: block
+				position: absolute
+				content: ''
+				width: 24px
+				height: 24px
+				top: -2px
+				left: 0
+				background: #ffffff
+				border: 1px solid #F0F0F0
+				border-radius: 50%
+				transition: 0.2s
+			&:after
+				display: none
+				position: absolute
+				content: ''
+				width: 24px
+				height: 24px
+				top: -2px
+				left: 0
+				border-radius: 50%
+				background: url('../img/Ellipse.png') no-repeat 50% 50% #367BF5
+			&:hover
+				color: #222222
+				&:before
+					border-color: #222222
+					box-sizing: border-box
+		span
+			margin-left: 16px
+			color: #222222
+			opacity: 0.3
+	&-total
+		width: 100%
+		max-width: 360px
+		height: max-content
+		background: #F9F9FB
+		border-radius: 4px
+		padding: 24px
+		margin-top: 32px
+		&__title
+			display: block
+			font-family: $OS-B
+			font-size: 22px
+			line-height: 26px
+			letter-spacing: -0.01em
+			color: #222222
+		&__promo
+			margin: 16px 0
+			position: relative
+			input
+				width: 100%
+				font-family: $OS-R
+				font-size: 16px
+				line-height: 16px
+				color: #BEBEBE
+				background: #FFFFFF
+				border: 1px solid #F0F0F0
+				box-sizing: border-box
+				border-radius: 4px
+				padding: 20px 78px 20px 16px
+				transition: 0.2s
+				&:hover
+					border-color: #7C7C7C
+				&:focus
+					border: 2px solid #367BF5
+				&:focus + a
+					height: 68px
+			a
+				display: flex
+				align-items: center
+				justify-content: center
+				position: absolute
+				top: -1px
+				right: -2px
+				width: 66px
+				height: 66px
+				font-family: $OS-B
+				font-size: 15px
+				line-height: 14px
+				color: #222222
+				background: #F0F0F0
+				border-top-right-radius: 4px
+				border-bottom-right-radius: 4px
+				transition: 0.2s
+		p
+			display: flex
+			justify-content: space-between
+			margin: 0
+			font-size: 15px
+			line-height: 24px
+			span
+				display: block
+		&__property
+			font-family: $OS-R
+			color: #7C7C7C
+		&__val
+			display: block
+			font-family: $OS-SB
+			color: #222222
+		&__sum
+			font-family: $OS-B
+			font-size: 22px
+			line-height: 26px
+			letter-spacing: -0.01em
+			color: #222222
+			margin-top: 16px
+		&__btn
+			width: 100%
+			height: 40px
+			margin-top: 16px
+
+//Стили для страницы благодарности
+.thanks
+	padding: 40px 0 56px
+	&-title
+		display: block
+		font-family: $OS-B
+		font-size: 48px
+		line-height: 48px
+		color: #222222
+	&-block
+		display: flex
+		padding: 24px
+		margin-top: 32px
+		background: #F9F9FB
+		border-radius: 4px
+		&__info
+			width: 100%
+			max-width: 554px
+			padding-right: 24px
+			p
+				display: flex
+				margin: 0
+		&__status
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 24px
+			background: #367BF5
+			border-radius: 4px
+	&-info
+		&__property
+			display: block
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #7C7C7C
+			margin-right: 16px
+		&__val
+			display: block
+			font-family: $OS-SB
+			font-size: 15px
+			line-height: 24px
+			color: #222222
+		&__text
+			display: block
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 24px
+			color: #2c2c2c
+			padding-top: 24px
+			margin: 24px 0 16px
+			border-top: 1px solid #F0F0F0
+	&-status
+		&__link
+			width: 100%
+			max-width: 304px
+			font-family: $OS-B
+			font-size: 22px
+			line-height: 26px
+			letter-spacing: -0.01em
+			text-decoration-line: underline
+			color: #FFFFFF
+			transition: 0.2s
+			&:hover
+				text-decoration: none
+
