@@ -22,6 +22,30 @@ $(document).ready(function () {
 		variableWidth: true,
 		// autoplay: true,
 		// autoplaySpeed: 4000
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true
+				}
+			}
+		]
 	});
 	
 	//Инициализация слайдера в карточке с товаром
@@ -78,7 +102,7 @@ $(document).ready(function () {
 	});
 
 	//Анимация прокрутки страницы
-	$(".navbar-menu").on("click","a", function (event) {
+	$(".navbar-menu, .mobile-menu").on("click","a", function (event) {
 		//отменяем стандартную обработку нажатия по ссылке
 		event.preventDefault();
 		//забираем идентификатор бока с атрибута href
@@ -132,5 +156,36 @@ $(document).ready(function () {
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
 		return false;
+	});
+	
+	//Меню при скролле
+	$(window).scroll(function () {
+		var navFix = $('.navbar-fixed');
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 150 && $(this).width() > 992) {
+				navFix.slideDown();
+			} else {
+				navFix.css('display', 'none');
+			}
+		});
+	});
+	
+	//Меню в мобильном
+	$('.header-burger').on('click', function(e) {
+		e.preventDefault();
+		$('.mobile-menu').addClass('menu-active');
+	});
+	$('.mobile-menu__close, .mobile-menu a').on('click', function(e) {
+		e.preventDefault();
+		$('.mobile-menu').removeClass('menu-active');
+	});
+	
+	//Скрываем меню, если клик был вне блока
+	$(document).on('mouseup', function (e){
+		var block = $(".mobile-menu");
+		if (!block.is(e.target)
+			&& block.has(e.target).length === 0) {
+			block.removeClass('menu-active');
+		}
 	});
 });
