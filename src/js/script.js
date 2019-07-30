@@ -10,8 +10,8 @@ $(document).ready(function () {
 	$('.main-slider').slick({
 		dots: true,
 		arrows: true,
-		// autoplay: true,
-		// autoplaySpeed: 4000
+		autoplay: true,
+		autoplaySpeed: 4000
 	});
 	
 	//Инициализация слайдера с партнерами
@@ -20,8 +20,6 @@ $(document).ready(function () {
 		slidesToScroll: 3,
 		arrows: true,
 		variableWidth: true,
-		// autoplay: true,
-		// autoplaySpeed: 4000
 		responsive: [
 			{
 				breakpoint: 992,
@@ -63,11 +61,40 @@ $(document).ready(function () {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		asNavFor: '.product-slider__for',
-		// centerMode: true,
 		arrows: true,
 		vertical: true,
 		verticalSwiping: true,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					vertical: false,
+					verticalSwiping: false
+				}
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					vertical: false,
+					verticalSwiping: false,
+				}
+			},
+			{
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					vertical: false,
+					verticalSwiping: false,
+					adaptiveHeight: true,
+				}
+			}
+		]
 	});
 	
 	//Инициализация табов
@@ -188,4 +215,26 @@ $(document).ready(function () {
 			block.removeClass('menu-active');
 		}
 	});
+	
+	//Дропы в мобиле на странице с карточкой товара
+	$('.product-tab__item').on('click', 'a', function(e) {
+		e.preventDefault();
+		$(this).next().slideToggle();
+		$(this).children().toggleClass('product-tab__active');
+	}) 
+	
+	//Поле для промокода в корзине
+	$('.basket-total__promo').on('change input', 'input', function() {
+		if ($(this).val() != '') {
+			$(this).next().css({
+				background: '#F73859',
+				color: '#ffffff'
+			});
+		} else {
+			$(this).next().css({
+				background: '#F0F0F0',
+				color: '#000000'
+			});
+		}
+	})
 });
