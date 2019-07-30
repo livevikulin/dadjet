@@ -1669,6 +1669,45 @@
 			transition: 0.2s
 			&:hover
 				text-decoration: none
+				
+//Стили для 404 страницы
+.error
+	background: #F9F9FB
+	border-radius: 4px
+	padding: 40px 0 56px
+	&-title
+		display: block
+		font-family: $OS-B
+		font-size: 48px
+		line-height: 48px
+		color: #222222
+		margin-bottom: 32px
+	&-subtitle
+		display: block
+		width: 100%
+		max-width: 441px
+		font-family: $OS-R
+		font-size: 15px
+		line-height: 24px
+		color: #000000
+		margin-bottom: 32px
+		a
+			color: #367BF5
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	&-back
+		display: block
+		font-family: $OS-SB
+		font-size: 15px
+		line-height: 20px
+		text-decoration-line: underline
+		color: #367BF5
+		margin-bottom: 16px
+		&:hover
+			text-decoration: none
+		&:last-child
+			margin-bottom: 0
 
 @media (max-width: 1200px)
 	.advantages
@@ -1870,6 +1909,9 @@
 				a
 					text-align: center
 					margin-bottom: 24px
+	.error
+		&-title
+			font-size: 28px
 @media (max-width: 580px) 
 	.slide
 		&-box

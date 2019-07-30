@@ -1,0 +1,16 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Корзина";
+	- var main = true;
+
+block content
+	main
+		.main
+			.error
+				.container
+					.error-block
+						span.error-title Ошибка 404. Страница не найдена
+						span.error-subtitle Страница, на которую Вы хотели перейти, не найдена. Возможно, введен некорректный адрес или страница была удалена. 
+							a(href="#") Подробнее...
+						a(href="#").error-back Вернуться на предыдущую страницу
+						a(href="#").error-back Перейти на главную страницу
