@@ -689,11 +689,12 @@
 		letter-spacing: -0.03em
 		color: #222222
 	&-tabs
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
+		// display: flex
+		// justify-content: space-between
+		// flex-wrap: wrap
 		padding-top: 24px
 	&-box
+		width: 360px
 		min-height: 272px
 		cursor: pointer
 		&__image
@@ -764,6 +765,39 @@
 					border-bottom: 2px solid #367BF5
 					&:hover
 						color: #367BF5
+.tabs-slider
+	width: 100%
+	.slick-slide
+		width: 382px
+	.slick-arrow
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background: #FFFFFF
+		border: 1px solid #F0F0F0
+		box-sizing: border-box
+		z-index: 1
+		transition: 0.2s
+		&:hover
+			box-shadow: -8px 4px 8px rgba(0, 0, 0, 0.16)
+		&:active
+			box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.24)
+	.slick-prev
+		background-image: url('../img/arrow.png')
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		transform: rotate(180deg)
+		left: -20px
+		margin-top: -20px
+		&:before
+			display: none
+	.slick-next
+		background-image: url('../img/arrow.png')
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		right: -20px
+		&:before
+			display: none
 .breadcrumbs
 	font-family: $OS-R
 	font-size: 11px
@@ -1168,7 +1202,11 @@
 			position: relative
 			textarea
 				width: 100%
+				max-width: 753px
+				min-width: 300px
+				height: 100%
 				min-height: 200px
+				max-height: 200px
 				font-family: $OS-R
 				font-size: 16px
 				line-height: 16px
@@ -1708,6 +1746,18 @@
 			text-decoration: none
 		&:last-child
 			margin-bottom: 0
+.succsess
+	input
+		border: 2px solid #367BF5
+.errors
+	input
+		border: 2px solid #F73859
+	&:before
+		position: absolute
+		content: url('../img/error.png')
+		top: 50%
+		right: 16px
+		transform: translateY(-50%)
 
 @media (max-width: 1200px)
 	.advantages
@@ -1989,6 +2039,7 @@
 			flex-wrap: nowrap
 		&-box
 			width: 100%
+			min-height: auto
 			&__image
 				width: 100%
 				height: auto
@@ -2001,6 +2052,12 @@
 				li
 					margin-right: 0
 					margin-bottom: 10px
+	.tabs-slider
+		width: 100%
+		.slick-slide
+			width: 304px
+		.slick-arrow
+			top: 50%
 	.main
 		&-products
 			padding-bottom: 0

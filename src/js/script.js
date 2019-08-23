@@ -120,12 +120,50 @@ $(document).ready(function () {
 		}
 	});
 	
+	//Инициализация слайдера в табах
+	$('.tabs-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true
+				}
+			}
+		]
+	});
+	
 	//Инициализация fancybox
 	$('[data-fancybox]').fancybox({
 		helpers : {
             media : {}
         },
         speed : 400,
+	});
+	
+	//Инициализация маски для телефона
+	$('#feedback_phone, #input_p').mask("+7 (999)-999-99-99");
+	
+	//Валидация
+	$('.feedback-form input, .basket-form input').on('change', function() {
+		if ($(this).val() == "") {
+			$(this).parent().addClass('errors');
+			$(this).parent().removeClass('succsess');
+		} else if ($(this).val() != "") {
+			$(this).parent().addClass('succsess');
+			$(this).parent().removeClass('errors');
+		}
 	});
 
 	//Анимация прокрутки страницы
