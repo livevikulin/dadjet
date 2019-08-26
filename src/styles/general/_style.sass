@@ -1082,6 +1082,28 @@
 		background: #F9F9FB
 		border-radius: 4px
 		padding: 24px
+		p
+			max-width: 515px
+			font-family: $OS-SB
+			font-size: 15px
+			line-height: 24px
+			color: #222222
+			overflow: hidden
+			margin: 0 0 8px 0
+			position: relative
+			&:after
+				display: block
+				overflow: hidden
+				content: '.........................................................................................'
+				white-space: nowrap
+				color: #7C7C7C
+			span
+				&:first-child
+					float: left
+					margin-right: 5px
+				&:last-child
+					float: right
+					margin-left: 5px
 	&-like
 		background: #F9F9FB
 		padding: 40px 0 56px
@@ -1094,6 +1116,128 @@
 			&:hover
 				color: #0B55DB !important
 				cursor: pointer
+.reviews
+	&__head
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__title
+		font-family: $OS-B
+		font-size: 22px
+		line-height: 26px
+		letter-spacing: -0.01em
+		color: #000000
+	&__btns
+		a
+			font-family: $OS-SB
+			font-size: 15px
+			line-height: 14px
+			text-align: center
+			color: #FFFFFF
+			padding: 10px 20px
+			background: #F73859
+			border-radius: 4px
+			margin-left: 16px
+			transition: 0.2s
+			&:hover
+				background: #F00A30
+			&:active
+				background: #D8304C
+	&__main
+		padding-top: 24px
+.review
+	background: #ffffff
+	padding: 24px
+	border: 1px solid #F0F0F0
+	border-radius: 4px
+	margin-bottom: 8px
+	&__person
+		display: flex
+		padding-bottom: 12px
+		border-bottom: 1px solid #F0F0F0
+	&__photo
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		margin-right: 16px
+		overflow: hidden
+		img
+			width: 100%
+			object-fit: cover
+	&__name
+		display: block
+		font-family: $OS-B
+		font-size: 16px
+		line-height: 24px
+		letter-spacing: -0.01em
+		color: #222222
+	&__data
+		display: block
+		font-family: $OS-R
+		font-size: 13px
+		line-height: 16px
+		color: #7C7C7C
+		margin-bottom: 8px
+	&__text
+		padding: 8px 0 24px 66px
+	&__title
+		display: block
+		font-family: $OS_SB
+		font-size: 15px
+		line-height: 24px
+		color: #222222
+	&__subtitle
+		font-family: $OS-R
+		font-size: 15px
+		line-height: 24px
+		color: #7C7C7C
+	&__next
+		font-family: $OS-R
+		font-size: 15px
+		line-height: 24px
+		color: #367BF5
+		transition: 0.2s
+		&:hover
+			color: #0B55DB
+	&__answer
+		padding-top: 30px
+		margin-left: 66px
+		border-top: 1px solid #F0F0F0
+		.review__person
+			border: none
+		.review__info
+			width: 100%
+			border-bottom: 1px solid #F0F0F0
+.download
+	background: #ffffff
+	padding: 24px
+	&__item
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+		&:last-child
+			margin-bottom: 0
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background: #367BF5
+		margin-right: 16px
+		transition: 0.2s
+		&:hover
+			background: #0B55DB
+	&__text
+		display: block
+		font-family: $OS-B
+		font-size: 16px
+		line-height: 24px
+		letter-spacing: -0.01em
+		color: #222222
+		span
+			color: #367BF5
 
 //Стили для страницы оптовым клиентам
 .wholesaler

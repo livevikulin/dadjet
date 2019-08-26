@@ -119,10 +119,9 @@ $(document).ready(function () {
 			duration: 300
 		}
 	});
-<<<<<<< HEAD
 	
 	//Инициализация слайдера в табах
-	$('.tabs-slider').slick({
+	$(".tabs-slider").slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		variableWidth: true,
@@ -145,9 +144,6 @@ $(document).ready(function () {
 		]
 	});
 	
-=======
-
->>>>>>> 2e184f1d1e193101e3fce2506c47d5284a79ac1b
 	//Инициализация fancybox
 	$("[data-fancybox]").fancybox({
 		helpers: {
@@ -157,16 +153,19 @@ $(document).ready(function () {
 	});
 	
 	//Инициализация маски для телефона
-	$('#feedback_phone, #input_p').mask("+7 (999)-999-99-99");
+	$("#feedback_phone, #input_p").mask("+7 (999)-999-99-99");
 	
 	//Валидация
-	$('.feedback-form input, .basket-form input').on('change', function() {
+	$(".feedback-form input, .basket-form input").on("change", function() {
 		if ($(this).val() == "") {
-			$(this).parent().addClass('errors');
-			$(this).parent().removeClass('succsess');
-		} else if ($(this).val() != "") {
-			$(this).parent().addClass('succsess');
-			$(this).parent().removeClass('errors');
+			$(this).parent().addClass("errors");
+			$(this).parent().removeClass("succsess");
+		} else {
+			if ($(this).val() == "") {
+				return;
+			}
+			$(this).parent().addClass("succsess");
+			$(this).parent().removeClass("errors");
 		}
 	});
 
