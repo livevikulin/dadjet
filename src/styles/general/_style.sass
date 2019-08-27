@@ -359,6 +359,15 @@
 				width: auto
 				height: 100%
 .products
+	.products-color
+		ul
+			li
+				label
+					display: block
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 	&-title
 		display: block
 		font-family: $OS-B
@@ -379,6 +388,9 @@
 		box-sizing: border-box
 		border-radius: 4px
 		padding: 24px
+		transition: 0.2s
+		&:hover
+			box-shadow: 0 0 10px 5px #F5F5F5
 		&__image
 			width: 216px
 			height: 216px
@@ -500,6 +512,9 @@
 		box-sizing: border-box
 		border-radius: 4px
 		padding: 24px
+		transition: 0.2s
+		&:hover
+			box-shadow: 0 0 10px 5px #F5F5F5
 		&__image
 			width: 240px
 			height: 240px
@@ -519,6 +534,9 @@
 		box-sizing: border-box
 		border-radius: 4px
 		padding: 24px
+		transition: 0.2s
+		&:hover
+			box-shadow: 0 0 10px 5px #F5F5F5
 		&__subtitle
 			width: 100%
 			max-width: 502px
@@ -1318,7 +1336,7 @@
 				font-size: 16px
 				line-height: 16px
 				color: #BEBEBE
-				border: 1px solid #F0F0F0
+				border: 2px solid #F0F0F0
 				box-sizing: border-box
 				border-radius: 4px
 				padding: 16px
@@ -1361,7 +1379,7 @@
 				font-size: 16px
 				line-height: 16px
 				color: #BEBEBE
-				border: 1px solid #F0F0F0
+				border: 2px solid #F0F0F0
 				box-sizing: border-box
 				border-radius: 4px
 				padding: 16px
@@ -1535,7 +1553,7 @@
 				font-size: 16px
 				line-height: 16px
 				color: #BEBEBE
-				border: 1px solid #F0F0F0
+				border: 2px solid #F0F0F0
 				box-sizing: border-box
 				border-radius: 4px
 				padding: 16px
@@ -1570,12 +1588,13 @@
 			textarea
 				width: 100%
 				max-width: 696px
+				min-width: 300px
 				min-height: 80px
 				font-family: $OS-R
 				font-size: 16px
 				line-height: 16px
 				color: #BEBEBE
-				border: 1px solid #F0F0F0
+				border: 2px solid #F0F0F0
 				box-sizing: border-box
 				border-radius: 4px
 				padding: 16px
@@ -1712,6 +1731,14 @@
 			margin-left: 16px
 			color: #222222
 			opacity: 0.3
+		&__description
+			display: block
+			font-family: $OS-SB
+			font-size: 15px
+			line-height: 24px
+			color: #7C7C7C
+			padding-left: 32px
+			margin-left: 0 !important
 	&-total
 		width: 100%
 		max-width: 360px
@@ -1737,7 +1764,7 @@
 				line-height: 16px
 				color: #BEBEBE
 				background: #FFFFFF
-				border: 1px solid #F0F0F0
+				border: 2px solid #F0F0F0
 				box-sizing: border-box
 				border-radius: 4px
 				padding: 20px 78px 20px 16px
@@ -1936,6 +1963,13 @@
 				margin-right: 16px
 				&:last-child
 					margin-right: 0
+
+@media (max-width: 1111px)
+	.products
+		&-box
+			margin-bottom: 24px
+			&:last-child
+				margin-bottom: 0
 
 @media (max-width: 1100px)
 	.product
