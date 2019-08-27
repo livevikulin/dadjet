@@ -264,6 +264,18 @@ $(document).ready(function () {
 			});
 		}
 	});
+	
+	//Оплата для юр. лиц в корзине
+	$('#lawyer').on('click', function() {
+		$('.non-active').removeClass('non-active');
+	});
+	$('#lawyer').parent().prev().find('input').click(function() {
+		$('.lawyer').addClass('non-active');
+	});
+	
+	$('#lawyer_checkbox').on('click', function() {
+		$(this).parent().next('.basket-form__input').toggleClass('non-active');
+	});
 
 
 	$(".js-delivery-link-open").on("click", ()=>{
