@@ -17,7 +17,7 @@ $(document).ready(function () {
 	//Инициализация слайдера с партнерами
 	$(".partners-slider").slick({
 		slidesToShow: 6,
-		slidesToScroll: 3,
+		slidesToScroll: 1,
 		arrows: true,
 		variableWidth: true,
 		responsive: [
