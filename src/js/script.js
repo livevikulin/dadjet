@@ -204,13 +204,26 @@ $(document).ready(function () {
 	});
 
 	//Убираем лэйбл, если инпут заполнен
-	$("#input_user, #input_pass, #reg_name, #reg_phone, #reg_message, #reg_pass, #reg_repeatPass, #feedback_name, #feedback_phone, #feedback_mail, #feedback_textarea, #textarea_comment, #input_address, #input_pass, #input_e, #input_p, #input_o, #input_n, #input_f, .form-control").on("change", function () {
-		if ($(this).val() != "") {
-			$(this).next().css("display", "none");
+	const $inputs = $("#input_user, #input_pass, #reg_name, #reg_phone, #reg_message, #reg_pass, #reg_repeatPass, #feedback_name, #feedback_phone, #feedback_mail, #feedback_textarea, #textarea_comment, #input_address, #input_pass, #input_e, #input_p, #input_o, #input_n, #input_f, .form-control");
+	
+	$inputs.each( (i, el) => {
+		const $el = $(el);
+		if ($el.val() != "") {
+			$el.next().css("display", "none");
 		} else {
-			$(this).next().css("display", "block");
+			$el.next().css("display", "block");
 		}
 	});
+	
+	$inputs.on("change", function () {
+		const $this = $(this);
+		if ($this.val() != "") {
+			$this.next().css("display", "none");
+		} else {
+			$this.next().css("display", "block");
+		}
+	});
+	
 
 
 	//Меню при скролле
