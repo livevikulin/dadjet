@@ -229,13 +229,11 @@ $(document).ready(function () {
 	//Меню при скролле
 	$(window).scroll(function () {
 		var navFix = $(".navbar-fixed");
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 150 && $(this).width() > 992) {
-				navFix.slideDown();
-			} else {
-				navFix.css("display", "none");
-			}
-		});
+		if ($(this).scrollTop() > 150 && $(this).width() > 992) {
+			navFix.slideDown();
+		} else {
+			navFix.css("display", "none");
+		}
 	});
 
 	//Меню в мобильном
