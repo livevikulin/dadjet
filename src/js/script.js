@@ -153,7 +153,9 @@ $(document).ready(function () {
 	});
 	
 	//Инициализация маски для телефона
-	$("#feedback_phone, #input_p").mask("+7 (999)-999-99-99");
+	$.mask.definitions['9'] = '';
+	$.mask.definitions['d'] = '[0-9]';
+	$("#feedback_phone, #input_p").mask("+7 (9dd) ddd-dd-dd");
 	
 	//Валидация
 	$(".feedback-form input, .basket-form input").on("change", function() {
