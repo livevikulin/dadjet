@@ -2288,6 +2288,12 @@
 				.slick-list
 					width: 70%
 					margin: 0 auto
+		&-tabs
+			padding: 0
+			&__parametr
+				span
+					&:last-child
+						width: auto
 		&-tab
 			display: block
 		.main-gallery
@@ -2326,6 +2332,12 @@
 	.error
 		&-title
 			font-size: 28px
+	.reviews
+		&__btns
+			display: flex
+			flex-direction: column
+		&__question
+			margin-bottom: 10px
 @media (max-width: 580px) 
 	.slide
 		&-box
@@ -2443,6 +2455,13 @@
 				font-size: 13px
 			&__val
 				font-size: 13px
+		&-tabs
+			&__parametr
+				&:after
+					display: none
+				span
+					&:first-child
+						width: 50%
 	.basket
 		padding-top: 15px
 		&-title
@@ -2519,3 +2538,8 @@
 		&-box
 			&__image
 				display: none
+	.review
+		&__text
+			padding-left: 0
+		&__answer
+			margin-left: 0
