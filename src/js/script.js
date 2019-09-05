@@ -48,9 +48,10 @@ $(document).ready(function () {
 
 	//Инициализация слайдера в карточке с товаром
 	
-	$('.product-slider__nav').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-		let i = (currentSlide ? currentSlide : 0) + 1;
-		$('.js-modal-slider').slickGoTo(i);
+	$('.product-slider__nav').on('afterChange', function (event, slick, currentSlide) {
+		console.log(currentSlide);
+		let i = (currentSlide ? currentSlide : 0);
+		$('.js-modal-slider').slick('slickGoTo', i);
 	});
 	
 	$(".product-slider__for").slick({
