@@ -45,6 +45,14 @@ $(document).ready(function () {
 			}
 		]
 	});
+	
+	//Инициализация слайдера с плюсами
+	if ($(window).width() < 768) {
+		$('.main-feautures__block').slick({
+			infinite: false,
+			dots: true
+		});
+	};
 
 	//Инициализация слайдера в карточке с товаром	
 	$(".product-slider__for").slick({
