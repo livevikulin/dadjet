@@ -1,4 +1,4 @@
-import $ from "jquery";
+import "jquery";
 import "@fancyapps/fancybox";
 import "jquery-ui";
 import "jquery-ui-bundle";
@@ -148,6 +148,7 @@ $(document).ready(function () {
 		vertical: true,
 		verticalSwiping: true,
 		focusOnSelect: true,
+		swipe: false,
 		responsive: [
 			{
 				breakpoint: 768,
