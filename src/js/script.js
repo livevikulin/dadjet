@@ -11,7 +11,7 @@ $(document).ready(function () {
 		dots: true,
 		arrows: true,
 		autoplay: true,
-		autoplaySpeed: 4000
+		autoplaySpeed: 4000,
 	});
 
 	//Инициализация слайдера с партнерами
