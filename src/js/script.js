@@ -175,7 +175,7 @@ $(document).ready(function () {
 	//Анимация прокрутки страницы
 	$(".navbar-menu, .mobile-menu, .navbar-fixed").on("click", "a", function (event) {
 		//забираем идентификатор бока с атрибута href
-		$('.navbar-fixed').show();
+		$('.navbar-fixed').addClass('nav-active');
 		var id = $(this).attr("href"),
 			//узнаем высоту от начала страницы до блока на который ссылается якорь
 			top = $(id).offset().top;
@@ -230,9 +230,9 @@ $(document).ready(function () {
 	$(window).scroll(function () {
 		var navFix = $(".navbar-fixed");
 		if ($(this).scrollTop() > 150 && $(this).width() > 992) {
-			navFix.slideDown();
+			navFix.addClass('nav-visible');
 		} else {
-			navFix.css("display", "none");
+			navFix.removeClass('nav-visible');
 		}
 	});
 
