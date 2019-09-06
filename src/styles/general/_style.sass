@@ -114,6 +114,72 @@
 .ph-32
 	padding: 0 32px
 
+//Стили для текстовой страницы
+.text-page
+	padding: 50px 0
+h1
+	font-family: $OS-B
+	font-size: 48px
+	line-height: 56px
+	color: #222222
+h2
+	font-family: $OS-B
+	font-size: 32px
+	line-height: 48px
+	color: #222222
+h3
+	font-family: $OS-SB
+	font-size: 24px
+	line-height: 32px
+	color: #222222
+h4
+	font-family: $OS-B
+	font-size: 16px
+	line-height: 32px
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	color: #222222
+p
+	font-family: $OS-R
+	font-size: 15px
+	line-height: 25px
+	color: #222222
+.number-list
+	counter-reset: item
+	list-style: none
+	li
+		position: relative
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+		&:before
+			position: absolute
+			left: -26px
+			content: counter(item) ') '
+			counter-increment: item
+			font-family: $OS-R
+			font-size: 15px
+			line-height: 25px
+			color: #222222
+.dot-list
+	list-style: none
+	li
+		position: relative
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+		&:before
+			position: absolute
+			top: 6px
+			left: -26px
+			content: url('../../img/black-dot.png')
+			width: 8px
+			height: 8px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #222222
+
 //Стили для главной страницы
 .main
 	&-slider
