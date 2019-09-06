@@ -173,7 +173,7 @@ $(document).ready(function () {
 
 
 	//Анимация прокрутки страницы
-	$(".navbar-menu, .mobile-menu").on("click", "a", function (event) {
+	$(".navbar-menu, .mobile-menu, .navbar-fixed").on("click", "a", function (event) {
 		//забираем идентификатор бока с атрибута href
 		$('.navbar-fixed').show();
 		var id = $(this).attr("href"),
