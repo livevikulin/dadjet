@@ -211,7 +211,7 @@ $(document).ready(function () {
 	});
 
 	//Убираем лэйбл, если инпут заполнен
-	const $inputs = $("#input_user, #input_pass, #reg_name, #reg_phone, #reg_message, #reg_pass, #reg_repeatPass, #feedback_name, #feedback_phone, #feedback_mail, #feedback_textarea, #textarea_comment, #input_address, #input_pass, #input_e, #input_p, #input_o, #input_n, #input_f, .form-control, [name='name'], [name='phone'], .js-lawyer");
+	const $inputs = $("#input_user, #input_pass, #reg_name, #reg_phone, #reg_message, #reg_pass, #reg_repeatPass, #feedback_name, #feedback_phone, #feedback_mail, #feedback_textarea, #textarea_comment, #input_address, #input_pass, #input_e, #input_p, #input_o, #input_n, #input_f, .form-control, [name='name'], [name='phone'], .js-lawyer, [data-mask='phone-rus']");
 	
 	$inputs.each( (i, el) => {
 		const $el = $(el);
