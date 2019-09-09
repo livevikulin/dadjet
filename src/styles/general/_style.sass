@@ -238,6 +238,25 @@ p
 		&__block
 			display: flex
 			justify-content: space-between
+			.slick-dots
+				display: flex
+				justify-content: center
+				bottom: -40px
+				li
+					width: 12px
+					height: 12px
+					button
+						width: 12px
+						height: 12px
+						border: 2px solid #F0F0F0
+						box-sizing: border-box
+						border-radius: 50%
+						&:before
+							display: none
+				.slick-active
+					button
+						border: none
+						background: #F73859
 	&-feauture
 		width: 100%
 		max-width: 264px
