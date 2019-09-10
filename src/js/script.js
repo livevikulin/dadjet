@@ -109,7 +109,7 @@ $(document).ready(function () {
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 4,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					vertical: false,
 					verticalSwiping: false
 				}
@@ -118,7 +118,7 @@ $(document).ready(function () {
 				breakpoint: 580,
 				settings: {
 					slidesToShow: 4,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					vertical: false,
 					verticalSwiping: false,
 				}
@@ -127,7 +127,7 @@ $(document).ready(function () {
 				breakpoint: 400,
 				settings: {
 					slidesToShow: 4,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					vertical: false,
 					verticalSwiping: false,
 					adaptiveHeight: true,
