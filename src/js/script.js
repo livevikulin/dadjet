@@ -58,7 +58,6 @@ $(document).ready(function () {
 
 	$('.js-modal-product-slider-nav .product-slider__slide').on('click', (e) => {
 		const $el = $(e.target);
-		console.log($el);
 		$el.trigger('click');
 	});
 
@@ -83,7 +82,7 @@ $(document).ready(function () {
 
 	//Инициализация слайдера в карточке с товаром
 	$('.js-product-slider-nav').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-		let i = (currentSlide ? currentSlide : 0) + 1;
+		let i = currentSlide ? currentSlide : 0;
 		$('.js-modal-product-slider-nav').slick('slickGoTo', i);
 	});
 	
