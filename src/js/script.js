@@ -54,21 +54,52 @@ $(document).ready(function () {
 		});
 	};
 
-	//Инициализация слайдера в карточке с товаром	
-	$(".product-slider__for").slick({
+
+
+	$('.js-modal-product-slider-nav .product-slider__slide').on('click', (e) => {
+		const $el = $(e.target);
+		$el.trigger('click');
+	});
+
+	$('.js-product-slider-for').on('click', () => {
+		$('.js-modal-product-slider-for').css('opacity', 0);
+		$('.js-modal-product-slider-nav').css('opacity', 0);
+
+		$.fancybox.open({
+			src  : '#modal_photo',
+			type : 'inline',
+			opts : {
+				touch : false,
+				afterShow : function( instance, current ) {
+					$('.js-modal-product-slider-for').slick("getSlick").refresh();
+					$('.js-modal-product-slider-nav').slick("getSlick").refresh();
+					$(".js-modal-product-slider-for").fadeTo("slow", 1);
+					$(".js-modal-product-slider-nav").fadeTo("slow", 1);
+				}
+			}
+		});
+	});
+
+	//Инициализация слайдера в карточке с товаром
+	$('.js-product-slider-nav').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+		let i = currentSlide ? currentSlide : 0;
+		$('.js-modal-product-slider-nav').slick('slickGoTo', i);
+	});
+	
+	$(".js-product-slider-for").slick({
 		infinite: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
 		speed: 500,
-		asNavFor: ".product-slider__nav"
+		asNavFor: ".js-product-slider-nav"
 	});
-	$(".product-slider__nav").slick({
+	$(".js-product-slider-nav").slick({
 		infinite: false,
 		slidesToShow: 5,
 		slidesToScroll: 1,
-		asNavFor: ".product-slider__for",
+		asNavFor: ".js-product-slider-for",
 		arrows: true,
 		vertical: true,
 		verticalSwiping: true,
@@ -100,6 +131,60 @@ $(document).ready(function () {
 					vertical: false,
 					verticalSwiping: false,
 					adaptiveHeight: true,
+				}
+			}
+		]
+	});
+
+	$(".js-modal-product-slider-for").slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		speed: 500,
+		asNavFor: ".js-modal-product-slider-nav"
+	});
+
+	$(".js-modal-product-slider-nav").slick({
+		infinite: false,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: ".js-modal-product-slider-for",
+		arrows: true,
+		vertical: true,
+		verticalSwiping: true,
+		focusOnSelect: true,
+		swipe: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					vertical: false,
+					verticalSwiping: false
+				}
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					vertical: false,
+					verticalSwiping: false,
+					focusOnSelect: false,
+				}
+			},
+			{
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					vertical: false,
+					verticalSwiping: false,
+					adaptiveHeight: true,
+					focusOnSelect: false,
 				}
 			}
 		]
