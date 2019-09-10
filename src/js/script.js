@@ -310,6 +310,7 @@ $(document).ready(function () {
 	
 	$inputs.each( (i, el) => {
 		const $el = $(el);
+
 		if ($el.val() != "") {
 			$el.next().css("display", "none");
 		} else {
@@ -317,12 +318,24 @@ $(document).ready(function () {
 		}
 	});
 	
-	$inputs.on("change", function () {
-		const $this = $(this);
-		if ($this.val() != "") {
-			$this.next().css("display", "none");
+	$inputs.on("change", function (e) {
+		const $el = $(e.target);
+
+		if ($el.val() != "") {
+			$el.next().css("display", "none");
 		} else {
-			$this.next().css("display", "block");
+			$el.next().css("display", "block");
+		}
+	});
+
+	$inputs.on("blur", function (e) {
+		const $el = $(e.target);
+		console.log($el);
+
+		if ($el.val() != "") {
+			$el.next().css("display", "none");
+		} else {
+			$el.next().css("display", "block");
 		}
 	});
 	
