@@ -344,7 +344,6 @@ $(document).ready(function () {
 		$(".mobile-menu").addClass("menu-active");
 	});
 	$(".mobile-menu__close, .mobile-menu a").on("click", function (e) {
-		e.preventDefault();
 		$(".mobile-menu").removeClass("menu-active");
 	});
 
