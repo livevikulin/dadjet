@@ -180,7 +180,7 @@ $(document).ready(function () {
 
 
 	//Анимация прокрутки страницы
-	$(".navbar-menu, .mobile-menu, .navbar-fixed").on("click", "a", function (event) {
+	$(".navbar-menu, .navbar-fixed").on("click", "a", function (event) {
 		//забираем идентификатор бока с атрибута href
 		$('.navbar-fixed').addClass('nav-active');
 		var id = $(this).attr("href"),
@@ -188,6 +188,16 @@ $(document).ready(function () {
 			top = $(id).offset().top;
 		//анимируем переход на расстояние - top за 1500 мс
 		$("body,html").animate({scrollTop: top - 60}, 700);
+	});
+	
+	$(".mobile-menu a").on("click", function (event) {
+		//забираем идентификатор бока с атрибута href
+		$('.navbar-fixed').addClass('nav-active');
+		var id = $(this).attr("href"),
+			//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		//анимируем переход на расстояние - top за 1500 мс
+		$("body,html").animate({scrollTop: top - 115}, 700);
 	});
 
 	//Анимация текстового блока в слайде
