@@ -275,7 +275,7 @@ $(document).ready(function () {
 				$('.navbar-fixed').addClass('nav-active');
 				//узнаем высоту от начала страницы до блока на который ссылается якорь
 				let top = $('#' + $link).offset().top;
-				let offset = !!$el.closest('.mobile-menu') ? 115 : 60;
+				let offset = ($el.closest('.mobile-menu').length > 0) ? 115 : 60;
 				//анимируем переход на расстояние - top за 1500 мс
 				$("body,html").animate({scrollTop: top - offset}, 700);
 			}
@@ -327,6 +327,7 @@ $(document).ready(function () {
 
 	$inputs.on("blur", function (e) {
 		const $el = $(e.target);
+		console.log($el);
 
 		if ($el.val() != "") {
 			$el.next().css("display", "none");
