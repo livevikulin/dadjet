@@ -266,17 +266,19 @@ $(document).ready(function () {
 	//Анимация прокрутки страницы
 	$(".navbar-menu, .mobile-menu, .navbar-fixed").on("click", "a", function (event) {
 		//забираем идентификатор бока с атрибута href
-		let $el = $(this);
-		let $link = $el.data('link');
+		if ($('.js-page-main').length > 0) {
+			let $el = $(this);
+			let $link = $el.data('link');
 
-		if (!!$link && !!$('#' + $link)) {
-			event.preventDefault();
-			$('.navbar-fixed').addClass('nav-active');
-			//узнаем высоту от начала страницы до блока на который ссылается якорь
-			let top = $('#' + $link).offset().top;
-			let offset = !!$el.closest('.mobile-menu') ? 115 : 60;
-			//анимируем переход на расстояние - top за 1500 мс
-			$("body,html").animate({scrollTop: top - offset}, 700);
+			if (!!$link && $('#' + $link).length > 0) {
+				event.preventDefault();
+				$('.navbar-fixed').addClass('nav-active');
+				//узнаем высоту от начала страницы до блока на который ссылается якорь
+				let top = $('#' + $link).offset().top;
+				let offset = ($el.closest('.mobile-menu').length > 0) ? 115 : 60;
+				//анимируем переход на расстояние - top за 1500 мс
+				$("body,html").animate({scrollTop: top - offset}, 700);
+			}
 		}
 	});
 
