@@ -272,7 +272,7 @@ $(document).ready(function () {
 		if (!!$link && !!$('#' + $link)) {
 			event.preventDefault();
 			$('.navbar-fixed').addClass('nav-active');
-			//узнаем высоту от начала страницы до блока на который ссылается якорь			
+			//узнаем высоту от начала страницы до блока на который ссылается якорь
 			let top = $('#' + $link).offset().top;
 			let offset = !!$el.closest('.mobile-menu') ? 115 : 60;
 			//анимируем переход на расстояние - top за 1500 мс

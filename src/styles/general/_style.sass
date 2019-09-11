@@ -1588,9 +1588,9 @@ p
 			vertical-align: middle
 			border-top: 1px solid #F0F0F0
 			border-bottom: 1px solid #F0F0F0
+			box-sizing: content-box
 			padding: 24px 0
 			&:first-child
-				padding-left: 24px
 				border-left: 1px solid #F0F0F0
 				border-top-left-radius: 4px
 				border-bottom-left-radius: 4px
@@ -1608,7 +1608,9 @@ p
 			text-transform: uppercase
 			color: #7C7C7C
 		&__image
-			width: 78px
+			display: block
+			text-align: center
+			width: auto
 			height: 74px
 			img
 				width: auto
@@ -2599,8 +2601,6 @@ p
 			border: 1px solid #F0F0F0
 			border-radius: 4px
 			margin-bottom: 8px
-			&__image
-				margin-right: 8px
 			&__name
 				width: 100%
 				max-width: 250px
