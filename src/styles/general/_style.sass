@@ -288,7 +288,7 @@ p
 		padding: 40px 0 56px
 	&-feedback
 		padding: 40px 0 56px
-@keyframes slide 
+@keyframes slide
 	0%
 		opacity: 0
 		transform: translate(0px,100px)
@@ -465,11 +465,10 @@ p
 	&-block
 		display: flex
 		justify-content: space-between
-		margin-top: 32px
-		&:nth-child(1n+2)
-			margin-top: 24px
+		padding-top: 8px
+		flex-wrap: wrap
 	&-box
-		width: 264px
+		width: calc(25% - 18px)
 		height: 468px
 		border: 1px solid #F0F0F0
 		box-sizing: border-box
@@ -477,6 +476,14 @@ p
 		padding: 24px
 		transition: 0.2s
 		position: relative
+		margin-top: 24px
+		&_width
+			&_2
+				width: calc(50% - 12px)
+				display: flex
+				height: auto
+				min-height: 234px
+
 		&:hover
 			box-shadow: 0 0 10px 5px #F5F5F5
 		&__link
@@ -486,6 +493,10 @@ p
 		&__image
 			width: 216px
 			height: 216px
+			background-position: center
+			background-size: contain
+			background-repeat: no-repeat
+			flex: 0 0 216px
 		&__info
 			padding-top: 16px
 	&-info
@@ -641,6 +652,7 @@ p
 		padding: 24px
 		transition: 0.2s
 		position: relative
+		margin-top: 24px
 		&:hover
 			box-shadow: 0 0 10px 5px #F5F5F5
 		&__link
@@ -1191,7 +1203,7 @@ p
 		&__active
 			transform: rotate(180deg)
 			transition: 0.2s
-				
+
 		&__content
 			display: none
 			font-family: $OS-R
@@ -2133,7 +2145,7 @@ p
 			&:active
 				background: #D8304C
 				color: #ffffff
-			
+
 //Стили для 404 страницы
 .error
 	background: #F9F9FB
@@ -2212,13 +2224,8 @@ p
 				margin-right: 16px
 				&:last-child
 					margin-right: 0
-				
+
 @media (max-width: 1111px)
-	.products
-		&-box
-			margin-bottom: 24px
-			&:last-child
-				margin-bottom: 0
 	.articles
 		&-box
 			width: 33%
@@ -2229,7 +2236,12 @@ p
 			flex-direction: column
 		&-info
 			width: 100%
-
+	.products
+		&-box
+			width: calc(50% - 12px)
+			min-height: 234px
+			display: flex
+			height: auto
 @media (max-width: 992px)
 	.main
 		overflow-x: hidden
@@ -2242,10 +2254,8 @@ p
 			&__reverse
 				flex-direction: column-reverse
 	.products
-		&-box
-			margin-bottom: 24px
-			&:last-child
-				margin-bottom: 0
+		&-box__image
+			flex: 0 0 50%
 		&-bigbox
 			max-height: 100%
 	.articles
@@ -2283,7 +2293,7 @@ p
 				margin: 0 auto
 			&__info
 				text-align: center
-			
+
 @media (max-width: 768px)
 	.slide
 		&-box
@@ -2310,6 +2320,11 @@ p
 			&:nth-child(1n+2)
 				margin-top: 24px
 	.products
+		&-box
+			flex-direction: column
+			height: 468px
+			&__image
+				width: 216px
 		&-title
 			text-align: center
 		&-bigbox
@@ -2327,10 +2342,10 @@ p
 	.partners
 		&-title
 			text-align: center
-	.gallery 
+	.gallery
 		&-title
 			text-align: center
-		#tabs 
+		#tabs
 			ul
 				// justify-content: center
 				overflow-x: scroll
@@ -2437,7 +2452,7 @@ p
 			&__textarea
 				textarea
 					min-width: auto
-@media (max-width: 580px) 
+@media (max-width: 580px)
 	.main
 		&-slider
 			height: 300px
