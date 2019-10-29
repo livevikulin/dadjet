@@ -57,6 +57,7 @@
 		"jquery-ui-bundle": "^1.12.1-migrate",
 		"jquery.maskedinput": "^1.4.1",
 		"slick-slider": "^1.8.2",
-		"smart-grid": "^2.1.2"
+		"smart-grid": "^2.1.2",
+		"stickyfilljs": "^2.1.0"
 	}
 }
